@@ -1,0 +1,85 @@
+"use client"
+
+import type React from "react"
+
+import { useState } from "react"
+import { useRouter } from "next/navigation"
+
+export function LoginForm({ justRegistered = false }: { justRegistered?: boolean }) {
+  const router = useRouter()
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+    setError(null)
+    setLoading(true)
+    const form = e.currentTarget
+    const formData = new FormData(form)
+    const payload = {
+      email: String(formData.get("email") || ""),
+      password: String(formData.get("password") || ""),
+    }
+    const res = await fetch("/api/auth/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    })
+    setLoading(false)
+    const data = await res.json()
+    if (!res.ok) {
+      setError(data?.error || "Login failed")
+      return
+    }
+    router.push("/order")
+  }
+
+  return (
+    <div className="space-y-4">
+      {justRegistered ? (
+        <div className="rounded-md border border-border bg-accent p-3 text-sm">
+          Account created! Please login to continue.
+        </div>
+      ) : null}
+      <form onSubmit={onSubmit} className="space-y-4">
+        <div className="grid gap-1">
+          <label htmlFor="email" className="text-sm">
+            Email
+          </label>
+          <input
+            id="email"
+            type="email"
+            name="email"
+            required
+            className="rounded-md border border-border bg-background px-3 py-2"
+          />
+        </div>
+        <div className="grid gap-1">
+          <label htmlFor="password" className="text-sm">
+            Password
+          </label>
+          <input
+            id="password"
+            type="password"
+            name="password"
+            required
+            className="rounded-md border border-border bg-background px-3 py-2"
+          />
+        </div>
+        {error && (
+          <p className="text-sm text-destructive">
+            {"Login failed: "}
+            {String(error)}
+          </p>
+        )}
+        <button
+          type="submit"
+          disabled={loading}
+          className="w-full rounded-md bg-primary px-4 py-2 text-primary-foreground hover:opacity-90 disabled:opacity-50"
+        >
+          {loading ? "Signing in..." : "Sign In"}
+        </button>
+      </form>
+    </div>
+  )
+}

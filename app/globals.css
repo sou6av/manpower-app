@@ -141,4 +141,35 @@
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
+  
+  /* Smooth animations with custom easing */
+  .transition-smooth {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+    transition-duration: 300ms;
+  }
+  
+  .transition-smooth-slow {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+    transition-duration: 500ms;
+  }
+}
+
+/* Global animation improvements */
+* {
+  /* Reduce motion for accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Override default Tailwind transitions */
+@layer components {
+  .transition,
+  [class*="transition-"] {
+    transition-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
 }

@@ -1,12 +1,16 @@
+"use client"
+
 import Image from "next/image"
 import Link from "next/link"
 import { ArrowUpRight, CheckCircle2, Phone, Shield, Sparkles, Star } from "lucide-react"
+import { motion } from "framer-motion"
 
 import { Navbar } from "@/components/navbar"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
+import { Reveal, StaggerReveal, revealItem } from "@/components/ui/reveal"
 
 const SERVICES = [
   {
@@ -153,7 +157,7 @@ export default function HomePage() {
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {SERVICES.map((service) => (
-              <Card key={service.title} className="hover:-translate-y-1 hover:shadow-xl transition-transform">
+              <Card key={service.title} className="transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:scale-105" style={{ willChange: 'transform' }}>
                 <CardHeader className="gap-3">
                   <span className="text-2xl" aria-hidden>
                     {service.icon}

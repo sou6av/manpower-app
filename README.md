@@ -1,6 +1,10 @@
-# Manpower App
+# Labour.ly
 
-A modern web application for booking local manpower services in Kerala, built for the **Hack4Ease** vibe coding hackathon at **Evolvia**, organized by **IEDC CEV** and **Tinkerhub CEV**.
+A modern web application for booking local labour services in Kerala, built for the **Hack4Ease** vibe coding hacka1. Clone the repository:
+   ```bash
+   git clone https://github.com/sou6av/labour-ly.git
+   cd labour-ly
+   ```at **Evolvia**, organized by **IEDC CEV** and **Tinkerhub CEV**.
 
 ## Team Information
 
@@ -54,7 +58,7 @@ This project was developed with AI assistance. Below are the key prompts used du
 
 ### 1. Initial Project Setup
 ```
-Create a Next.js application for a manpower services booking platform targeting Kerala users. 
+Create a Next.js application for a labour services booking platform targeting Kerala users. 
 Include authentication, service listings, and order management. Use TypeScript, Tailwind CSS, 
 and MongoDB.
 ```
@@ -74,7 +78,7 @@ cards, forms, dialogs, and navigation. Implement a navbar with authentication st
 
 ### 4. Service Selection Interface
 ```
-Create a service selector component that displays available manpower services (coconut plucking, 
+Create a service selector component that displays available labour services (coconut plucking, 
 tank & well cleaning, housekeeping, chauffeur services). Make it visually appealing with icons 
 and descriptions.
 ```
@@ -149,7 +153,7 @@ Before you begin, ensure you have the following installed:
    ```
 
    **Environment Variable Details:**
-   - `MONGODB_URI`: Your MongoDB connection string (e.g., `mongodb://localhost:27017/manpower-app` for local MongoDB or MongoDB Atlas connection string)
+   - `MONGODB_URI`: Your MongoDB connection string (e.g., `mongodb://localhost:27017/labour-ly` for local MongoDB or MongoDB Atlas connection string)
    - `JWT_SECRET`: A secure random string for JWT token signing (generate using `openssl rand -base64 32`)
    - `NEXT_PUBLIC_APP_URL`: The base URL of your application
 
@@ -163,7 +167,7 @@ Before you begin, ensure you have the following installed:
 
    If using local MongoDB:
    - Ensure MongoDB service is running
-   - Use connection string: `mongodb://localhost:27017/manpower-app`
+   - Use connection string: `mongodb://localhost:27017/labour-ly`
 
 5. **Run the development server**
    ```bash
@@ -181,7 +185,7 @@ Before you begin, ensure you have the following installed:
 ### Project Structure
 
 ```
-manpower-app/
+labour-ly/
 ├── app/                    # Next.js app directory
 │   ├── api/               # API routes
 │   │   ├── auth/         # Authentication endpoints
@@ -279,7 +283,7 @@ This project is created for educational purposes as part of the Hack4Ease hackat
 - **IEDC CEV** and **Tinkerhub CEV** for organizing the Hack4Ease hackathon
 - **Evolvia** event organizers
 - All open-source libraries and tools used in this project
-- The local manpower service providers who inspired this solution
+- The local labour service providers who inspired this solution
 
 ## Contact
 

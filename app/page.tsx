@@ -96,7 +96,7 @@ export default function HomePage() {
               Kerala community powered
             </Badge>
             <h1 className="text-pretty text-4xl font-bold tracking-tight sm:text-5xl">
-              Get trusted manpower for every Kerala household chore—on demand.
+              Get trusted labour for every Kerala household chore—on demand.
             </h1>
             <p className="text-pretty text-base text-muted-foreground sm:text-lg">
               Tap into a verified network of climbers, cleaners, drivers, and skilled fixers. No middlemen—just reliable
@@ -128,7 +128,7 @@ export default function HomePage() {
             <div className="relative aspect-[4/5] w-full max-w-md overflow-hidden rounded-3xl border border-primary/20 bg-gradient-to-tr from-primary/10 via-transparent to-transparent shadow-2xl">
               <Image
                 src="/kerala-coconut-climber-manpower-services.png"
-                alt="Local coconut climber offering manpower services in Kerala"
+                alt="Local coconut climber offering labour services in Kerala"
                 fill
                 priority
                 className="object-cover"
@@ -171,7 +171,7 @@ export default function HomePage() {
             <Badge variant="secondary" className="text-xs uppercase tracking-wide">
               Why families trust us
             </Badge>
-            <h2 className="text-3xl font-semibold sm:text-4xl">Kerala-focused, community verified manpower</h2>
+            <h2 className="text-3xl font-semibold sm:text-4xl">Kerala-focused, community verified workers</h2>
             <p className="text-base text-muted-foreground">
               We combine hyperlocal relationships with modern scheduling and payments. Every helper is vetted in
               person, equipped with safety gear, and trained to deliver polite service. You receive live updates from
@@ -239,7 +239,7 @@ export default function HomePage() {
             <Badge variant="secondary" className="bg-primary text-primary-foreground">
               Ready to begin?
             </Badge>
-            <h2 className="text-3xl font-semibold sm:text-4xl">Book your manpower support in minutes</h2>
+            <h2 className="text-3xl font-semibold sm:text-4xl">Book your labour support in minutes</h2>
             <p className="text-base text-muted-foreground">
               Register once to manage all your household tasks. Track status, share feedback, and get priority support
               for repeat bookings.
@@ -267,7 +267,7 @@ export default function HomePage() {
               </p>
               <Separator />
               <p className="text-muted-foreground">
-                Email us at <a className="text-primary underline" href="mailto:care@keralamanpower.in">care@keralamanpower.in</a>
+                Email us at <a className="text-primary underline" href="mailto:care@labour.ly">care@labour.ly</a>
               </p>
             </CardContent>
           </Card>

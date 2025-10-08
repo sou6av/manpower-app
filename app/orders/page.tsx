@@ -15,7 +15,7 @@ export default async function OrdersPage() {
             <p className="text-sm font-medium uppercase tracking-wide text-primary">Your dashboard</p>
             <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">Service orders</h1>
             <p className="max-w-2xl text-sm text-muted-foreground">
-              Track all manpower service requests, know what is pending, and review completed visits in one place.
+              Track all service requests, know what is pending, and review completed visits in one place.
             </p>
           </div>
         </div>

@@ -24,10 +24,10 @@ export function Navbar() {
       <nav className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-4">
         <Link href="/" className="group flex items-center gap-3 font-semibold">
           <span className="flex size-10 items-center justify-center rounded-xl bg-primary/10 text-lg text-primary transition duration-200 group-hover:bg-primary/20">
-            KM
+            LL
           </span>
           <span className="flex flex-col leading-tight">
-            <span className="text-base tracking-tight">Kerala Manpower</span>
+            <span className="text-base tracking-tight">Labour.ly</span>
             <span className="text-xs font-normal text-muted-foreground">Trusted local services</span>
           </span>
         </Link>

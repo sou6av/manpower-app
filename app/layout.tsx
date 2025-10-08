@@ -8,8 +8,8 @@ import { RouteTransition } from "@/components/providers/route-transition"
 import { Suspense } from "react"
 
 export const metadata: Metadata = {
-  title: "Manpower App",
-  description: "Manpower services and ordering",
+  title: "Labour.ly",
+  description: "Trusted local labour services on demand",
   generator: "next.js",
 }
 
